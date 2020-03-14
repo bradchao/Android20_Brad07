@@ -43,20 +43,20 @@ public class MyView extends View {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        Log.v("brad", "onTouch");
+        //Log.v("brad", "onTouch");
         return gd.onTouchEvent(event);
     }
 
     private class MyGDListener extends GestureDetector.SimpleOnGestureListener{
         @Override
         public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-            Log.v("brad", "onFling");
+            Log.v("brad", velocityX +  " x " + velocityY);
             return super.onFling(e1, e2, velocityX, velocityY);
         }
 
         @Override
         public boolean onDown(MotionEvent e) {
-            Log.v("brad", "onDown");
+            //Log.v("brad", "onDown");
             return true; //super.onDown(e);
         }
     }
